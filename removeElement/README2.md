@@ -50,16 +50,41 @@ Constraints:
 0 <= val <= 100
 
 ### Solution
+1) 첫번 째 솔루션 (slicing + sorted + set)
 ```python
 class Solution(object):
-    def removeElement(self, nums, val):
-        i = 0
-        while i < len(nums):
-            if nums[i] != val:
-                i += 1
-            else:
-                nums.pop(i)
-        k = len(nums)
-        return k
+    def removeDuplicates(self, nums):
+        nums[:] = sorted(set(nums))
+        return len(nums)
+```
+=> nums 의 array list 를 set로 바꾼 이유 : set는 중복 되는 요소를 허용하지 않는 자료형이므로, 즁복되는 요소들을 제거해 줌.
+=> nums = sorted(set(nums))로 하지 않은 이유 : 
+    "nums[:]"로 슬라이싱을 사용하여 리스트를 새로 만들지 않고 리스트의 요소를 직접 수정한다 왜냐하면 리스트를 수정해야하는 것("In-Place")이 이 문제에서 원하는 바이기 떄문에이다. "nums[:]"로 슬라이싱은 입력 배열을 수정하는 데 사용되는 메모리가 상수로 유지되기 때문에 공간 복잡도(space complexcity) = O(1). 만약 "nums = " 으로 했다면 새로운 리슽트를 만들기 떄문에 공간 복잡도(space complexcity) = O(N) 이 된다.
+=> 시간 복잡도(Time Complexcity) = O(n log n)
+
+2) 두번쨰 솔루션 (Two-pointers with for-loop)
+```python
+class Solution(object):
+    def removeDuplicates(self, nums: List[int]) -> int:
+		j = 0
+		for i in range(1, len(nums)):
+			if nums[j] != nums[i]:
+				j += 1
+				nums[j] = nums[i]
+		return j + 1
 ```
 
+        
+3) 세번째 솔루션 (using .pop() with while-loop)
+```python
+class Solution(object):
+    def removeDuplicates(self, nums: List[int]) -> int:
+		def removeDuplicates(self, nums: List[int]) -> int:
+		i = 1
+		while i < len(nums):
+			if nums[i] == nums[i - 1]:
+				nums.pop(i)
+			else:
+				i += 1
+		return len(nums)
+```
