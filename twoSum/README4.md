@@ -39,8 +39,5 @@ Only one valid answer exists.
 
 1) Brute Force (완전탐색)
     The timecomplex is O(n^2), which fit to the first constraint "2 <= nums.length <= 10^4".
-    
-```python
-
-
-```
+2) hasg table (해쉬테이블)
+    The implementation efficiently solves the Two Sum problem using the two-pointer technique and a hash table to achieve a time complexity of O(n), where n is the number of elements in the nums array. This is because both building the hash table and finding the complement involve iterating through the array once, leading to linear time complexity.
