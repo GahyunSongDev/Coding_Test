@@ -70,10 +70,12 @@
     - Time Complexity
         1. The for i in s: loop iterates over each character in the string s. If the length of the string is n, this loop runs n times.
         2. Operations inside the loop (checking membership, appending, and popping) are all O(1).
-        -> Overall Time Complexity: O(n), where n is the length of the input string s.
+        
+        => Overall Time Complexity: O(n), where n is the length of the input string s.
 
     - Space Complexity 
         1. The stack can store up to n characters in the worst case (all opening brackets).
         2. The map_brackets dictionary is a fixed size and requires O(1) space.
-        -> Overall Space Complexity: O(n), where n is the length of the input string s.
+        
+        => Overall Space Complexity: O(n), where n is the length of the input string s.
 
