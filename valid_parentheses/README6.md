@@ -32,9 +32,7 @@
         Divide the bracket types and adjusting their counts accordingly, while also maintaining the order of brackets, you can ensure the validity of the bracket sequence. So, the important thing to consider is that if there’re a few open brackets first, there should be the same type of a close bracket of last open bracket in the list ‘S’
         => S = “()[[{}]]” -> it means that I can think of LIFO to solve this problem, which is ‘Stack’.
         
-        <img width="404" alt="스크린샷 2024-05-31 오후 12 47 42" src="https://github.com/GahyunSongDev/Coding_Test/assets/160058929/9f0a258c-fa1c-4167-b205-db94f07c269c">
-
-<img width="404" alt="스크린샷 2024-05-31 오후 12 47 42" src="https://github.com/GahyunSongDev/Coding_Test/assets/160058929/e0eb16d3-d8db-49c0-a522-79d92fd886cb">
+        <img width="404" alt="스크린샷 2024-05-31 오후 12 47 42" src="https://github.com/GahyunSongDev/Coding_Test/assets/160058929/e0eb16d3-d8db-49c0-a522-79d92fd886cb">
 
 
         Finally, this Stack is empty and it returns TRUE.
