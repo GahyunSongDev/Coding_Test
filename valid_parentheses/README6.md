@@ -32,7 +32,8 @@
         Divide the bracket types and adjusting their counts accordingly, while also maintaining the order of brackets, you can ensure the validity of the bracket sequence. So, the important thing to consider is that if there’re a few open brackets first, there should be the same type of a close bracket of last open bracket in the list ‘S’
         => S = “()[[{}]]” -> it means that I can think of LIFO to solve this problem, which is ‘Stack’.
         
-        ![Getting Started](/Users/alliesong/Documents/Coding_Test/valid_parentheses/example_photo.png)
+        ![alt text](ex.png)
+                
         Finally, this Stack is empty and it returns TRUE.
 
 3) Design psuedo code.
