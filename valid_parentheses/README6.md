@@ -17,24 +17,23 @@
 [ 20. Valid Paranthese ]
 1) Understand the problem
 2) Think about it intuitively
- a. The data list must have an even number of elements.
+    a. The data list must have an even number of elements.
+    b. If there's an open bracket, it must have close the same type of bracket.
+    c. It can’t have close bracket before the same type of an open bracket.
+    d. The time complexity must be under n^2.
 
- b. If there's an open bracket, it must have close the same type of bracket.
- c. It can’t have close bracket before the same type of an open bracket.
- d. The time complexity must be under n^2.
+        Approach 1> Simply thinking of this problem when there’re only ‘()’, 
+        S = “[()(())((()))]”
+        valid = 0
+        When there is an open bracket, valid increases by 1. When there is a corresponding close bracket, valid decreases by 1. Therefore, when it ends, if valid is 0 AND ‘valid’ never becomes negative, it returns True. If not, it returns False.
 
-    Approach 1> Simply thinking of this problem when there’re only ‘()’, 
-    S = “[()(())((()))]”
-    valid = 0
-    When there is an open bracket, valid increases by 1. When there is a corresponding close bracket, valid decreases by 1. Therefore, when it ends, if valid is 0 AND ‘valid’ never becomes negative, it returns True. If not, it returns False.
-
-    Approach 2> Now, there’re all type of brackets such as (), [], {}.
-    S = “()[[{}]]”
-    Divide the bracket types and adjusting their counts accordingly, while also maintaining the order of brackets, you can ensure the validity of the bracket sequence. So, the important thing to consider is that if there’re a few open brackets first, there should be the same type of a close bracket of last open bracket in the list ‘S’
-    => S = “()[[{}]]” -> it means that I can think of LIFO to solve this problem, which is ‘Stack’.
-    
-    ![Getting Started](./example_photo.png)
-    Finally, this Stack is empty and it returns TRUE.
+        Approach 2> Now, there’re all type of brackets such as (), [], {}.
+        S = “()[[{}]]”
+        Divide the bracket types and adjusting their counts accordingly, while also maintaining the order of brackets, you can ensure the validity of the bracket sequence. So, the important thing to consider is that if there’re a few open brackets first, there should be the same type of a close bracket of last open bracket in the list ‘S’
+        => S = “()[[{}]]” -> it means that I can think of LIFO to solve this problem, which is ‘Stack’.
+        
+        ![Getting Started](/Users/alliesong/Documents/Coding_Test/valid_parentheses/example_photo.png)
+        Finally, this Stack is empty and it returns TRUE.
 
 3) Design psuedo code.
     For i in s
