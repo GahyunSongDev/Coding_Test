@@ -65,3 +65,15 @@
                     if not Stack or map_bracket[i] != Stack.pop() :
                         return False
             return not Stack
+
+5) Complexity efficient
+    - Time Complexity
+        a. The for i in s: loop iterates over each character in the string s. If the length of the string is n, this loop runs n times.
+        b. Operations inside the loop (checking membership, appending, and popping) are all O(1).
+    Overall Time Complexity: O(n), where n is the length of the input string s.
+
+    - Space Complexity
+        a. The stack can store up to n characters in the worst case (all opening brackets).
+        b. The map_brackets dictionary is a fixed size and requires O(1) space.
+    Overall Space Complexity: O(n), where n is the length of the input string s.
+
