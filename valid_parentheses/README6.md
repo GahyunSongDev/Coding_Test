@@ -66,7 +66,7 @@
                         return False
             return not Stack
 
-5) Complexity efficient
+5) Complexity efficiency
     - Time Complexity
         a. The for i in s: loop iterates over each character in the string s. If the length of the string is n, this loop runs n times.
         b. Operations inside the loop (checking membership, appending, and popping) are all O(1).
