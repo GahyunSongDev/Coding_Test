@@ -9,10 +9,9 @@
         b .Scan the temperature list
         c. While scanning the temperature list, I compare the current i-th temperature to the temperature on the top of the stack.
         d. If the current temperature is higher than the one on the top of the stack, the element gets popped,calculates the days, and updates the days in the result list I Initiated at first.
-
-![alt text](<스크린샷 2024-06-07 오후 2.35.34.png>)
-![alt text](<스크린샷 2024-06-07 오후 2.35.50.png>)
-![alt text](<스크린샷 2024-06-07 오후 2.36.00.png>)
+<img width="570" alt="스크린샷 2024-06-07 오후 2 35 34" src="https://github.com/GahyunSongDev/Coding_Test/assets/160058929/dc010cd1-0906-4e75-8e84-3a32bf188d1a">
+<img width="591" alt="스크린샷 2024-06-07 오후 2 35 50" src="https://github.com/GahyunSongDev/Coding_Test/assets/160058929/8fa02aa8-7fec-46e6-b0e7-63dc901c540f">
+<img width="362" alt="스크린샷 2024-06-07 오후 2 36 00" src="https://github.com/GahyunSongDev/Coding_Test/assets/160058929/6a86e5d3-e1e6-4a21-84d9-7acf0c15a09a">
 
 => The time complexity : big-O(n) because it just needs to push and pop the elements from the stack during scanning the temperature list.
 		
